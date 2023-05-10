@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hello',
@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
     <h1>Hello {{name}}!</h1>
     {{runChangeDetection}}
   `,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class HelloComponent {
   @Input() name?: string;
